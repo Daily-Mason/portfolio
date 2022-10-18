@@ -213,25 +213,57 @@ p {
 .major__description {
   font-size: var(--font-small);
 }
+.about__jobs,
+.about__degree {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
 
-.job {
+.degree__title,
+.jobs__title {
+  font-size: var(--font-regular);
+  margin-left: 1px;
+}
+
+.degree__title:after,
+.jobs__title:after {
+  content: "";
+  width: 56px;
+  height: 2px;
+  position: relative;
+  left: 0%;
+  margin-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: block;
+  background-color: var(--color-black);
+}
+
+.job,
+.degree {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.job__description {
+.job__description,
+.degree__description {
   margin: 0 16px;
   text-align: left;
 }
 
 .job__name,
-.job__period {
+.job__period,
+.degree__name,
+.degree__period {
   color: var(--color-light-grey);
   font-size: var(--font-small);
 }
 
-.job__period {
+.job__period,
+.degree__period {
   font-size: var(--font-micro);
 }
 
@@ -310,7 +342,7 @@ p {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-redius);
   font-size: var(--font-regular);
-  padding: 8px 48px;
+  padding: 8px 28px 8px 48px;
 }
 
 .category__btn.active,
@@ -397,4 +429,47 @@ p {
   margin-top: 8px;
   display: block;
   background-color: var(--color-white);
+}
+
+/* Tetimonial */
+#testimonials {
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+
+.testimonial__avatar {
+  /* height: 150px; */
+  width: 150px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-redius);
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-pink);
 }
