@@ -476,7 +476,7 @@ p {
 
 /* Contact */
 #contact {
-  background-color: var(--color-pink);
+  background-color: rgb(188, 61, 219);
 }
 
 .contact__title,
