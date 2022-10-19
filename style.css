@@ -119,17 +119,18 @@ p {
 }
 
 .navbar__menu__item {
-  padding: 0px 12px;
-  margin: 0 4px;
+  padding: 2px 12px;
+  margin: 2px 4px 0px 4px;
   cursor: pointer;
 }
-.navbar__menu__item.active {
+.navbar__menu__item:active {
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-redius);
 }
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-white);
   border-radius: var(--size-border-redius);
+  color: var(--color-black);
 }
 
 .navbar__toggle-btn {
@@ -166,6 +167,12 @@ p {
   border-radius: var(--size-border-redius);
   color: var(--color-white);
 }
+
+.home__contact:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
 /* Section common */
 .section {
   text-align: center;
@@ -188,7 +195,6 @@ p {
   width: 250px;
   padding: 20px 10px;
   border: 4px solid rgba(137, 43, 226, 0.4);
-  /* background-color: rgb(13, 172, 240, 0.02); */
   border-radius: 10px;
 }
 
