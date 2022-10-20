@@ -91,13 +91,22 @@ p {
 
 /* Navbar */
 #navbar {
+  position: absolute;
+  top: 0px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(13, 172, 240);
+  background-color: rgba(13, 172, 240, 0);
   color: var(--color-white);
   align-items: center;
-  position: sticky;
   padding: 0 16px;
+  transition: all 0.6s;
+}
+
+#navbar.active {
+  position: sticky;
+  top: 0px;
+  background-color: rgba(13, 172, 240);
 }
 
 .navbar__logo {
@@ -111,7 +120,7 @@ p {
   margin: 5px 5px 0 0;
 }
 
-.navbar__menu {
+.navbar__menu__box {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -120,7 +129,7 @@ p {
 
 .navbar__menu__item {
   padding: 2px 12px;
-  margin: 2px 4px 0px 4px;
+  margin: 0px 4px 0px 4px;
   cursor: pointer;
 }
 .navbar__menu__item:active {
@@ -143,6 +152,7 @@ p {
 }
 
 #home {
+  /* position: absolute; */
   background: url("imgs/home-bacground.png") center/cover no-repeat;
   padding: 40px;
   text-align: center;
@@ -537,6 +547,10 @@ p {
     align-items: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.active {
+    display: flex;
   }
 
   .about__majors {
