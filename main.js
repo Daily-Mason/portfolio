@@ -2,21 +2,51 @@
 
 const navbar__toggleBtn = document.querySelector('.navbar__toggle-btn');
 const navbar__menu = document.querySelector('.navbar__menu');
-const navbar__menu__item = document.querySelector('.navbar__menu__item');
-var navbar__array = document.getElementsByClassName('navbar__menu__item')
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
+
+
+function getOffset(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY
+  };
+}
 
 // Show menu whe press the Toggle Btn
 navbar__toggleBtn.addEventListener('click', () => {
     navbar__menu.classList.toggle('active');
 }); 
 
-// Add Border to Active NavBtn when cliked
-console.log(navbar__array)
+
+// Handle scrolling when tapping on the navbar menu
+const navbar__menu__box = document.querySelector('.navbar__menu__box');
+
+navbar__menu__box.addEventListener('click', (event) => {
+    var target = event.target;
+    var link = target.dataset.link;
+    if (link == null) {
+        return;
+    }
+    console.log(event.target.dataset.link);
+    var scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({
+        'behavior':'smooth'
+    });
+})
+
+const home__contactBtn = document.querySelector('.home__contact');
+home__contactBtn.addEventListener('click', () => {
+    var scrollTo = document.querySelector('#contact');
+    scrollTo.scrollIntoView({
+        'behavior':'smooth'
+    });
+})
 
 // Make transparent the navbar when it is scrolled to the top
 window.addEventListener('scroll', () => {
+    // console.log(scrollY);
     if (scrollY >= navbarHeight) {
         navbar.classList.add('navbar__dark');
     } else {
