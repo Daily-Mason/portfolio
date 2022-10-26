@@ -56,3 +56,18 @@ window.addEventListener('scroll', () => {
     home.style.opacity = 1-(scrollY / homeHeight);
     }
 );
+
+
+const arrow__btn = document.querySelector('.arrow__scrollUp');
+// Show Arrow button when the scroll over the half of home
+window.addEventListener('scroll', () => {
+    if (scrollY >= homeHeight/2) {
+        arrow__btn.classList.add('show');
+    } else {
+        arrow__btn.classList.remove('show');
+    }
+});
+// Arrow button to scroll to top
+arrow__btn.addEventListener('click', () => {
+    scrollIntoView('#home');
+});
