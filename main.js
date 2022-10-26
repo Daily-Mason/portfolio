@@ -30,19 +30,20 @@ navbar__menu__box.addEventListener('click', (event) => {
         return;
     }
     console.log(event.target.dataset.link);
-    var scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({
-        'behavior':'smooth'
-    });
+    scrollIntoView(link);
 })
-
+// Handle click on "contact" button on home
 const home__contactBtn = document.querySelector('.home__contact');
 home__contactBtn.addEventListener('click', () => {
-    var scrollTo = document.querySelector('#contact');
+    scrollIntoView('#contact')
+})
+
+function scrollIntoView(selector) {
+    var scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({
         'behavior':'smooth'
     });
-})
+}
 
 // Make transparent the navbar when it is scrolled to the top
 window.addEventListener('scroll', () => {
