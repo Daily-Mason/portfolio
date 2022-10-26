@@ -5,15 +5,6 @@ const navbar__menu = document.querySelector('.navbar__menu');
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-
-function getOffset(el) {
-  const rect = el.getBoundingClientRect();
-  return {
-    left: rect.left + window.scrollX,
-    top: rect.top + window.scrollY
-  };
-}
-
 // Show menu whe press the Toggle Btn
 navbar__toggleBtn.addEventListener('click', () => {
     navbar__menu.classList.toggle('active');
@@ -54,3 +45,14 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('navbar__dark');
     }
 });
+
+// Make transparent the Home according the scrolling
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+
+window.addEventListener('scroll', () => {
+    console.log(`scrollY : ${window.scrollY}`);
+    console.log(`homeHeight : ${homeHeight}`);
+    home.style.opacity = 1-(scrollY / homeHeight);
+    }
+);
