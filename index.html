@@ -208,10 +208,14 @@
       <h1>My Work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
-        <button class="category__btn">All<span class="category__count">8</span></button>
-        <button class="category__btn">HW-Engineering<span class="category__count">3</button>
-        <button class="category__btn">Paper Work<span class="category__count">3</button>
-        <button class="category__btn">SW-Engineering<span class="category__count">2</button>
+        <button class="category__btn active" data-filter="*">
+          All<span class="category__count">8</span></button>
+        <button class="category__btn" data-filter="HW">
+          HW-Engineering<span class="category__count" >3</button>
+        <button class="category__btn" data-filter="Paper">
+          Paper Work<span class="category__count">3</button>
+        <button class="category__btn" data-filter="SW">
+          SW-Engineering<span class="category__count">2</button>
       </div>
 
       <div class="work__projects">
@@ -219,6 +223,7 @@
           href="https://youtu.be/PdUbbLetfug" 
           class="project"
           target="blank"
+          data-type="HW"
         >
           <img class="project__img"  src="imgs/projects/InputShaping.png" alt="YOUTUBE">
           <div class="project__description">
@@ -230,6 +235,7 @@
           href="https://youtu.be/-GivdXgK0rk" 
           class="project"
           target="blank"
+          data-type="HW"
         >
           <img class="project__img" src="imgs/projects/dodo.PNG" alt="YOUTUBE">
           <div class="project__description">
@@ -241,6 +247,7 @@
           href="https://youtu.be/nn4c4VgR_x8" 
           class="project"
           target="blank"
+          data-type="HW"
         >
           <img class="project__img" src="imgs/projects/M2.PNG" alt="YOUTUBE">
           <div class="project__description">
@@ -252,6 +259,7 @@
           href="https://ieeexplore.ieee.org/abstract/document/9385913" 
           class="project"
           target="blank"
+          data-type="Paper"
         >
           <img class="project__img" src="imgs/projects/InputShaping_paper.png" alt="PAPER">
           <div class="project__description">
@@ -263,6 +271,7 @@
           href="https://ieeexplore.ieee.org/abstract/document/9385913" 
           class="project"
           target="blank"
+          data-type="Paper"
         >
           <img class="project__img" src="imgs/projects/Sensorfusion_paper.png" alt="PAPER">
           <div class="project__description">

@@ -71,3 +71,33 @@ window.addEventListener('scroll', () => {
 arrow__btn.addEventListener('click', () => {
     scrollIntoView('#home');
 });
+
+
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach((project) => {
+        // console.log(project.dataset.type);
+        if (filter === '*' || filter === project.dataset.type) {
+            project.classList.remove('hidden');
+        } else if (project.dataset.type == filter) {
+            project.classList.remove('hidden');
+        } else {
+            project.classList.add('hidden');
+        }
+    });
+        projectContainer.classList.remove('anim-out');
+    }, 200);
+    
+
+    // console.log(filter);
+});

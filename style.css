@@ -403,6 +403,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all 0.2s ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.98) translateY(10px);
 }
 
 .project {
@@ -414,6 +421,10 @@ p {
   justify-content: center;
   align-items: center;
   background-color: var(--color-light-grey);
+}
+
+.project.hidden {
+  display: none;
 }
 
 .project__img {
