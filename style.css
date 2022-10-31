@@ -130,6 +130,8 @@ p {
   padding: 2px 12px;
   margin: 0px 4px 0px 4px;
   cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-redius);
 }
 .navbar__menu__item.active {
   border: 1px solid var(--color-white);

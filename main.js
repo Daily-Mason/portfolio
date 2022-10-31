@@ -97,7 +97,16 @@ workBtnContainer.addEventListener('click', (e) => {
     });
         projectContainer.classList.remove('anim-out');
     }, 200);
-    
+    // Remove selection from previous item and select new one
+    var active__btn = document.querySelector('.category__btn.active');
+    if (active__btn === null) {
+        return;
+    } else {
+        var target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+        // console.log(target);
+        active__btn.classList.remove('active');
+        target.classList.add('active');
+    }
 
     // console.log(filter);
 });
