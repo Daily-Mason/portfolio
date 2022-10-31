@@ -455,16 +455,16 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
   content: "";
-  width: 25px;
+  width: 50px;
   height: 2px;
   position: relative;
   left: 50%;
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 8px;
   display: block;
   background-color: var(--color-white);
@@ -574,6 +574,10 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: rgba(13, 172, 240);
+  }
+  #navbar.navbar__dark {
+    background-color: rgba(13, 172, 240);
   }
 
   .navbar__menu {
@@ -587,6 +591,11 @@ p {
     display: flex;
   }
 
+  .navbar__menu__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .about__majors {
     flex-direction: column;
     align-items: center;

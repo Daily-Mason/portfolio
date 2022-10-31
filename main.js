@@ -8,6 +8,9 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 // Show menu whe press the Toggle Btn
 navbar__toggleBtn.addEventListener('click', () => {
     navbar__menu.classList.toggle('active');
+});
+window.addEventListener('scroll', () => {
+    navbar__menu.classList.remove('active');
 }); 
 
 
